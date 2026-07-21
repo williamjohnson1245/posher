@@ -1,0 +1,18 @@
+Copy these variables into:
+Vercel -> Project -> Settings -> Environment Variables
+
+SCALEKIT_ENVIRONMENT_URL=https://poshinfo.scalekit.dev
+SCALEKIT_CLIENT_ID=skc_135200015827075076
+SCALEKIT_CLIENT_SECRET=PASTE_SCALEKIT_CLIENT_SECRET_HERE
+SESSION_SECRET=GENERATE_A_RANDOM_SECRET_OF_AT_LEAST_32_CHARACTERS
+APP_URL=https://YOUR-PROJECT.vercel.app
+MAGIC_LINK_EXPIRES_IN=600
+DESTINATION_URL=
+
+Still required before deployment:
+1. SCALEKIT_CLIENT_SECRET from Scalekit -> Developers -> API Credentials.
+2. SESSION_SECRET generated locally with:
+   node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+3. APP_URL after Vercel creates the production domain.
+
+Do not publish SCALEKIT_CLIENT_SECRET or SESSION_SECRET in GitHub.
