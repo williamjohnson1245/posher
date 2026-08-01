@@ -1,0 +1,9 @@
+notifications:
+  - provider: Email
+    to:
+      - tigershiva782@gmail.com
+    subject: 'Build {{status}}: {{projectName}} {{buildVersion}}'
+    message: "<div style=\"font-family:Segoe UI,Arial,sans-serif;font-size:14px;line-height:1.5;color:#202124;max-width:640px;margin:auto;\">\n  <h2 style=\"font-weight:600;\">Build update</h2>\n  <p>The AppVeyor build has finished with status <strong>{{status}}</strong>.</p>\n  <p>Project: <strong>{{projectName}}</strong><br>Version: {{buildVersion}}</p>\n  <p><a href=\"{{buildUrl}}\">Open build details</a></p>\n</div>"
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: false
